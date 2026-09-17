@@ -13,6 +13,5 @@ export default function SortByProgression() {
       progress: calc.progression,
     });
   }
-
-  return new_data.sort((a, b) => b.progress - a.progress);
+  console.table(new_data.sort((a, b) => b.progress - a.progress))
 }

@@ -1,13 +1,22 @@
 import data from "../data.js";
 import isUserExists from "../utilities/isUserExists.js";
 import ajouterApprenant from "./ajouterApprenant.js";
-import { prompt } from "../main.js";
+import validerResultat from "../utilities/validerResultat.js";
+import prompt from "../utilities/prompt.js";
 
 
 export default function enregistrerResultat() {
     let id = prompt('Identifiant de lapprenant: ')
+        if(isNaN(id)) {
+        console.log('this input only take numbers')
+        return;
+    }
     if (isUserExists(id)) {
         let jour = prompt('Jour (1 à 7): ')
+        if(!validerResultat(id, jour)) {
+            console.log("you add the previos days first")
+            return;
+        }
         let exercicesTermines = prompt('Exercices terminés: ')
         let totalExercices = prompt('Total Exercices: ')
         let challengeTermine = prompt('challenge Termine (oui/non): ')
@@ -30,6 +39,7 @@ export default function enregistrerResultat() {
         }
         console.dir(data, { depth: null })
     } else {
-        ajouterApprenant()
+        console.log("the user u trying to modife it does not exists")
+        return
     }
 }

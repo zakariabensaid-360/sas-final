@@ -2,12 +2,17 @@ import data from "../data.js";
 import isUserExists from "../utilities/isUserExists.js";
 import normaliserNom from "../utilities/normaliserNom.js";
 import enregistrerResultat from "./enregistrerResultat.js";
-import { prompt } from "../main.js";
+import prompt from "../utilities/prompt.js";
 
-export default function ajouterApprenant(ids) {
+export default function ajouterApprenant() {
     let id = prompt('Identifiant de lapprenant: ')
+    if(isNaN(id)) {
+        console.log('this input only take numbers')
+        return;
+    }
     if (isUserExists(id)) {
-        enregistrerResultat()
+        console.log('the user alredy exists')
+        return;
     } else {
 
         let nomComplet = prompt('Apprenant Trouvé: ')
@@ -38,5 +43,3 @@ export default function ajouterApprenant(ids) {
 
 }
 
-
-ajouterApprenant()

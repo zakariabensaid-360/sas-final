@@ -1,5 +1,5 @@
 import data from "../data.js";
-import { prompt } from "../main.js";
+import prompt from "../utilities/prompt.js";
 import calculerProgression from "./calculerProgression.js";
 
 export default function filtrerParNiveau() {
@@ -32,7 +32,7 @@ export default function filtrerParNiveau() {
       });
     }
   }
-
+  console.table(filtred_data)
   return filtred_data;
 }
 

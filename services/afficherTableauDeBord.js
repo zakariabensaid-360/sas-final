@@ -31,7 +31,6 @@ export default function afficherTableauDeBord() {
   };
 
   console.table(Display)
-  console.table(SortByProgression())
+  SortByProgression()
 }
 
-afficherTableauDeBord();

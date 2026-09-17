@@ -1,5 +1,4 @@
-import data from "../data.js";
-import { prompt } from "../main.js";
+import prompt from "../utilities/prompt.js";
 import FindByID from "../utilities/FindByID.js";
 import FindByName from "../utilities/FindByName.js";
 
@@ -16,4 +15,3 @@ export default function rechercherApprenant() {
     console.dir(result, {depth: null})
 }
 
-rechercherApprenant()

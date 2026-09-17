@@ -1,5 +1,5 @@
 import data from "../data.js";
-import { prompt } from "../main.js";
+import prompt from "../utilities/prompt.js";
 import calculerProgression from "./calculerProgression.js";
 
 export default function afficherApprenant() {
@@ -19,7 +19,5 @@ export default function afficherApprenant() {
         }
     }
     console.table(obj)
-    return obj
 }
 
-afficherApprenant()
