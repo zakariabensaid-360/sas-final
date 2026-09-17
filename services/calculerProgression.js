@@ -8,7 +8,7 @@ export default function calculerProgression(id) {
   let TotalExercicestermines = 0;
   let TotalExercicesproposes = 0;
   let TotalChallengestermines = 0;
-  let TotalJourneesrenseignees = user.resultats.length -1;
+  let TotalJourneesrenseignees = user.resultats.length;
 
   for (let i = 0; i < user.resultats.length; i++) {
     TotalExercicestermines += user.resultats[i].exercicesTermines;
