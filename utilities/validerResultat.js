@@ -2,7 +2,7 @@ import data from "../data.js";
 
 
 export default function validerResultat(id, jour) {
-    let validUser;
+    let result;
     if(isNaN(jour)) {
         console.log("the day inpute should be number only")
         return;
@@ -14,9 +14,14 @@ export default function validerResultat(id, jour) {
 
     for (let i = 0; i < data.length; i++) {
         if(data[i].id == id) {
-            validUser = data[i]
+            result = data[i].resultats
         }       
     }
-
+for (let i = 0; i < result.length; i++) {
+    if(jour == result[i].jour) {
+        return true;
+    }
+    
+}
     
 }

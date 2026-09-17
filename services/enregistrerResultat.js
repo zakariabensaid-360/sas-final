@@ -34,6 +34,20 @@ export default function enregistrerResultat() {
     }
     for (let i = 0; i < data.length; i++) {
       if (data[i].id == id) {
+        // checking if the day already exist to modife it with new data to not another one 
+        for (let j = 0; j < data[i].resultats.length; j++) {
+          if (Number(jour) == data[i].resultats[j].jour) {
+            data[i].resultats[j] = {
+              jour: Number(jour),
+              exercicesTermines: Number(exercicesTermines),
+              totalExercices: Number(totalExercices),
+              challengeTermine,
+            };
+            return;
+            
+          }
+        }
+
         data[i].resultats.push({
           jour: Number(jour),
           exercicesTermines: Number(exercicesTermines),
