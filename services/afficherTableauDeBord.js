@@ -1,4 +1,5 @@
 import data from "../data.js";
+import SortByProgression from "../utilities/SortByProgression.js";
 import calculerProgression from "./calculerProgression.js";
 
 export default function afficherTableauDeBord() {
@@ -30,6 +31,7 @@ export default function afficherTableauDeBord() {
   };
 
   console.table(Display)
+  console.table(SortByProgression())
 }
 
 afficherTableauDeBord();
