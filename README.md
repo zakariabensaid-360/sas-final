@@ -17,4 +17,14 @@ calculer progression function cobined with utilitie function make me  build the 
 ****
 call all the main functions in main.js and use a do/while and a swithch to make the app run as long as the variable choix is not 0 && link functions with the command number in the switch
 
-# how i ca
+# how i can improve the project idea
+****
+** using typescript
+** replace the local database with sql databse
+** backend (express, ...) building api
+** cache system
+** using a (react, next, ...) to better way to take data from users / display data
+
+
+
+Made by Zakaria Bensaid

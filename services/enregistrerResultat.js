@@ -11,7 +11,13 @@ export default function enregistrerResultat() {
   }
   if (isUserExists(id)) {
     let jour = prompt("Jour (1 à 7): ");
-    validerResultat(id, jour);
+    try {
+      validerResultat(id, jour);
+    } catch (error) {
+      console.log(error)
+      return;
+    }
+    
     let exercicesTermines = prompt("Exercices terminés: ");
     if (isNaN(exercicesTermines) || Number(exercicesTermines) > 20) {
       console.log(
@@ -34,7 +40,7 @@ export default function enregistrerResultat() {
     }
     for (let i = 0; i < data.length; i++) {
       if (data[i].id == id) {
-        // checking if the day already exist to modife it with new data to not another one 
+        // checking if the day already exist to modife it with new data to not another one iio
         for (let j = 0; j < data[i].resultats.length; j++) {
           if (Number(jour) == data[i].resultats[j].jour) {
             data[i].resultats[j] = {

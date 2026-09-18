@@ -13,5 +13,5 @@ if(name == "add full name") {
             return data[i]
         } 
     }
-    return "The user is not found"
+    throw "The user is not found"
 }
