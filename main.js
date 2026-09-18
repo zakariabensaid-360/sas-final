@@ -25,7 +25,7 @@ do {
 7. Filtrer les apprenants par niveau
 8. Trier les apprenants par progression décroissante
 9. Trier les apprenants par ordre alphabétique
-0.     
+0. exit
   `);
   choix = prompt("Votre choix: ");
 
@@ -44,13 +44,13 @@ do {
       break;
     case "5":
       enregistrerResultat();
-      break; // Added missing break
+      break; 
     case "6":
       rechercherApprenant();
-      break; // Added missing break
+      break;
     case "7":
       filtrerParNiveau();
-      break; // Added missing break
+      break; 
     case "8":
       SortByProgression();
       break;
