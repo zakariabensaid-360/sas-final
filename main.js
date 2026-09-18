@@ -58,7 +58,7 @@ do {
       SortAlphabet();
       break;
     case "0":
-      console.log("Au revoir !");
+      console.log("see you later!");
       break;
     default:
       console.log("Choix invalide, veuillez réessayer.");
