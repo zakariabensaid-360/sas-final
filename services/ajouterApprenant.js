@@ -14,6 +14,10 @@ export default function ajouterApprenant() {
     return;
   } else {
     let nomComplet = prompt("Apprenant Trouvé: ");
+    if(nomComplet.split(' ')[1] == undefined || !isNaN(nomComplet)) {
+      console.log("you should add a full name of the user && and should contain string only \n")
+      return;
+    }
     let ville = prompt("Donne Ville : ");
     let jour = prompt("Jour (1 à 7): ");
     if (isNaN(jour) || Number(jour) > 7 || Number(jour) <= 0) {

@@ -20,9 +20,9 @@ export default function calculerProgression(id) {
 
   let progression = (TotalExercicestermines / TotalExercicesproposes) * 100
   let niveau;
-  if(progression > 80) {
+  if(progression >= 80) {
     niveau = "Solide"
-  } else if(progression > 50 && progression < 79) {
+  } else if(progression >= 50 && progression <= 79) {
     niveau = "En progression"
   } else if(progression < 50) {
     niveau = "À renforcer"
