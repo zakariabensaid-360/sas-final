@@ -1,7 +1,7 @@
 export default function normaliserNom(str) {
   if (str.split(" ")[1] == undefined || !isNaN(str)) {
     console.log(
-      "you should add a full name of the user && and should contain string only \n",
+      "you should add a full name of the user && and should contain string only ss\n",
     );
     return;
   }

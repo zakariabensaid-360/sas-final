@@ -11,6 +11,11 @@ export default function rechercherApprenant() {
     result = FindByID(search);
   }
 
+  if(result == "The user is not found" || result == "add full name") {
+    console.log("the user it does not exists")
+    return;
+  }
+
   let DisplayInfo = {
     id: result.id,
     nomComplet: result.nomComplet,
